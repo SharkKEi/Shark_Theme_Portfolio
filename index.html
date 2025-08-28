@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jeff Warren T. Marquez - AKA SharkKEi</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <style>
+    body {
+      background: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-buttons {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    #page-wrapper {
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+
+    #page-wrapper.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #play-music-btn, #pause-music-btn {
+      position: fixed;
+      top: 15px;
+      z-index: 1000;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #play-music-btn {
+      right: 70px;
+      background: #00ffff;
+      color: #001f3f;
+    }
+
+    #pause-music-btn {
+      right: 15px;
+      background: #ff0044;
+      color: white;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Persistent Music Player -->
+  <audio id="bg-music" loop autoplay muted>
+    <source src="jaws.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <button id="play-music-btn" aria-label="Play background music" title="Play Music">▶ Play Music</button>
+  <button id="pause-music-btn" aria-label="Pause background music" title="Pause Music">❚❚ Pause Music</button>
+
+  <div id="page-wrapper">
+    <div id="shark-transition">
+      <div class="shark-fin"></div>
+    </div>
+
+    <header>
+      <nav class="nav-buttons" role="navigation" aria-label="Main Navigation">
+        <button data-href="home.html">Home</button>
+        <button data-href="about.html">About Me</button>
+        <button data-href="contact.html">Contacts</button>
+      </nav>
+
+      <div class="shark-bg">
+        <div class="shark"></div>
+      </div>
+      <div class="overlay"></div>
+      <h1>Jeff Warren T. Marquez</h1>
+      <p>AKA SharkKEi</p>
+    </header>
+
+    <footer>
+      <p style="color:#ccc; text-align:center; padding:20px 0; font-size: 0.9rem;">
+        &copy; 2025 Jeff Warren T. Marquez | AKA SharkKEi | Made with passion and bite 🦈
+      </p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeff Warren T. Marquez - AKA SharkKEi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #000;
+    }
+    .nav-buttons {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin: 30px 0;
+    }
+    /* Music control buttons */
+    #play-music-btn, #pause-music-btn {
+      position: fixed;
+      top: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+    #play-music-btn {
+      right: 70px;
+      background: #00ffff;
+      color: #001f3f;
+    }
+    #pause-music-btn {
+      right: 15px;
+      background: #ff0044;
+      color: white;
+      display: none;
+    }
+  </style>
+
+</head>
+<body>
+
+  <audio id="bg-music" loop>
+    <source src="jaws.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <button id="play-music-btn" aria-label="Play background music">▶ Play Music</button>
+  <button id="pause-music-btn" aria-label="Pause background music">❚❚ Pause Music</button>
+
+  <header>
+    <div class="nav-buttons">
+      <button onclick="window.location.href='index.html'">Home</button>
+      <button onclick="window.location.href='about.html'">About Me</button>
+      <button onclick="window.location.href='contact.html'">Contacts</button>
+    </div>
+
+    <div class="shark-bg">
+      <div class="shark"></div>
+    </div>
+    <div class="overlay"></div>
+
+    <h1>Contact Me</h1>
+    <p><strong>Phone:</strong> 09061886706</p>
+    <p><strong>Email:</strong> <a href="mailto:jeffmarquez.2534@gmail.com">jeffmarquez.2534@gmail.com</a></p>
+    <p><strong>Facebook:</strong> 
+      <a href="https://www.facebook.com/jeff.warren.timogan.marquez/" target="_blank" rel="noopener noreferrer">
+        facebook.com/jeff.warren.timogan.marquez
+      </a>
+    </p>
+  </header>
+
+  <script>
+    const audio = document.getElementById('bg-music');
+    const playBtn = document.getElementById('play-music-btn');
+    const pauseBtn = document.getElementById('pause-music-btn');
+
+    playBtn.addEventListener('click', () => {
+      audio.play().then(() => {
+        playBtn.style.display = 'none';
+        pauseBtn.style.display = 'inline-block';
+      }).catch(err => console.error('Playback failed:', err));
+    });
+
+    pauseBtn.addEventListener('click', () => {
+      audio.pause();
+      pauseBtn.style.display = 'none';
+      playBtn.style.display = 'inline-block';
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Jeff Warren T. Marquez - AKA SharkKEi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #000;
+    }
+    .nav-buttons {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin: 30px 0;
+    }
+    /* Music control buttons */
+    #play-music-btn, #pause-music-btn {
+      position: fixed;
+      top: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+    #play-music-btn {
+      right: 70px;
+      background: #00ffff;
+      color: #001f3f;
+    }
+    #pause-music-btn {
+      right: 15px;
+      background: #ff0044;
+      color: white;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="jaws.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Music Controls -->
+  <button id="play-music-btn" aria-label="Play background music">▶ Play Music</button>
+  <button id="pause-music-btn" aria-label="Pause background music">❚❚ Pause Music</button>
+
+  <!-- Navigation -->
+  <header>
+    <div class="nav-buttons">
+      <button onclick="window.location.href='index.html'">Home</button>
+      <button onclick="window.location.href='about.html'">About Me</button>
+      <button onclick="window.location.href='contact.html'">Contacts</button>
+    </div>
+
+    <div class="shark-bg">
+      <div class="shark"></div>
+    </div>
+    <div class="overlay"></div>
+    <h1>About Me!</h1>
+    <p>Get to know the mind behind the creator of this — I'm Jeff Warren T. Marquez, a passionate developer, designer, and digital creator dedicated to crafting meaningful tech experiences through creativity and innovation.</p>
+  </header>
+
+  <main>
+    <section id="about" class="about">
+      <img src="jeff.jpg" alt="Portrait of Jeff Warren T. Marquez" class="profile-img" />
+      <div class="info">
+        <h2>About Me</h2>
+        <ul>
+          <li><strong>Full Name:</strong> Jeff Warren Timogan Marquez</li>
+          <li><strong>Age:</strong> 21</li>
+          <li><strong>Gender:</strong> Male</li>
+          <li><strong>Birthdate:</strong> Dec. 3, 2003</li>
+          <li><strong>Location:</strong> Zone 3 Natumolan, Tagoloan, Misamis Oriental</li>
+          <li><strong>Course:</strong> Bachelor of Science in Information Technology</li>
+          <li><strong>Life Verse:</strong> Jeremiah 29:11</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="life-verse" class="life-verse">
+      <h2>Life Verse</h2>
+      <blockquote>
+        "For I know the plans I have for you," declares the Lord. <br />
+        "Plans to prosper you and not to harm you, plans to give you hope and a future." <br />
+        <span>— Jeremiah 29:11</span>
+      </blockquote>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <div class="skill-cards">
+        <div class="card"><i class="fas fa-paint-brush"></i> Graphic Designing</div>
+        <div class="card"><i class="fab fa-html5"></i> HTML</div>
+        <div class="card"><i class="fab fa-css3-alt"></i> CSS</div>
+        <div class="card"><i class="fab fa-js-square"></i> JavaScript</div>
+        <div class="card"><i class="fab fa-python"></i> Python</div>
+        <div class="card"><i class="fas fa-database"></i> SQL</div>
+        <div class="card"><i class="fab fa-figma"></i> Figma</div>
+        <div class="card"><i class="fas fa-tshirt"></i> Shirt Designing</div>
+        <div class="card"><i class="fas fa-pen-nib"></i> Logo Designing</div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="project-gallery">
+        <div class="project-card"><img src="1.png" alt="Sari-sari Store" /><p>Sari-sari Store</p></div>
+        <div class="project-card"><img src="2.png" alt="Library Management System" /><p>Library Management System</p></div>
+        <div class="project-card"><img src="ANGEL.jpg" alt="Black Angel Art" /><p>Black Angel</p></div>
+        <div class="project-card">
+          <img src="FRONTSHIRT.png" alt="YP Shirt Front" />
+          <img src="BACKSHIRT.png" alt="YP Shirt Back" />
+          <p>YP Shirt</p>
+        </div>
+        <div class="project-card"><img src="logo.jpg" alt="PIT Logo" /><p>PIT Logo</p></div>
+        <div class="project-card"><img src="SHIRT.jpg" alt="Church Shirt Design" /><p>Church Shirt</p></div>
+        <div class="project-card"><img src="VOWS.jpg" alt="Valentine Poster Design" /><p>Poster for Valentines</p></div>
+      </div>
+    </section>
+
+    <section id="education" class="education">
+      <h2>Academic Background</h2>
+      <div class="education-gallery">
+        <div class="education-card"><img src="CSFL.png" alt="Christian School For Life Logo" class="education-logo" /><p>Christian School For Life</p></div>
+        <div class="education-card"><img src="ECE.jpg" alt="Esperanza Central School Logo" class="education-logo" /><p>Esperanza Central School</p></div>
+        <div class="education-card"><img src="PCC.jpg" alt="Pilgrim Christian College Logo" class="education-logo" /><p>Pilgrim Christian College</p></div>
+        <div class="education-card"><img src="SMAT.jpg" alt="Saint Mary's Academy Logo" class="education-logo" /><p>Saint Mary's Academy of Tagoloan</p></div>
+        <div class="education-card"><img src="LCCDO.jpg" alt="Lourdes College Logo" class="education-logo" /><p>Lourdes College</p></div>
+        <div class="education-card"><img src="USTP.png" alt="USTP Logo" class="education-logo" /><p>University of Science and Technology of Southern Philippines</p></div>
+      </div>
+    </section>
+
+    <section id="hobbies" class="hobbies">
+      <h2>Hobbies</h2>
+      <div class="hobby-gallery">
+        <div class="hobby-card">
+          <img src="Anime.jpg" alt="Watching Anime and Movies" />
+          <p>Watching Anime and Movies</p>
+        </div>
+        <div class="hobby-card">
+          <img src="Manhwa.png" alt="Reading Manhwa" />
+          <p>Reading Mangas, Manhwas, and Manhuas</p>
+        </div>
+        <div class="hobby-card">
+          <img src="MTG.jpg" alt="Playing TCGs" />
+          <p>Playing TCGs</p>
+        </div>
+        <div class="hobby-card">
+          <img src="food.jpg" alt="Eating or Food Trip" />
+          <p>Eating or Food Trip</p>
+        </div>
+        <div class="hobby-card">
+          <img src="play.jpg" alt="Playing Mobile and PC Games" />
+          <p>Playing Mobile and PC Games</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jeff Warren T. Marquez - SharkKEi. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Link external JS to handle music play/pause -->
+  <script src="script.js"></script>
+
+</body>
+</html>
